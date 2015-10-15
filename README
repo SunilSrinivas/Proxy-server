@@ -1,0 +1,39 @@
+###############################################################################
+Eric Jozlin (ew6750)
+Sunil Gummadam 
+Mon Oct 28 09:18:07 EDT 2013
+Project 1
+DEMO TIME: 12:00 to 12:30 
+###############################################################################
+
+The proxy server is able to cache any static content (in most encodings). The TTL is decided by a few factors, including the expiration date, the if-modified header, and a global maximum TTL of 5 minutes. 
+The OS used was Ubuntu
+
+The functionality developed for the mid term project is as follows:
+
+A Http Proxy Cache Server, which handles GET,HEAD,POST requests.It should Forward all HTTP request headers to server and all response headers back to the client. 
+
+To keep track of all requests the server prints one line for each requeted service.This line includes the host name or IP address of the client and the original request line sent by the client.
+
+List of files:
+
+1.Main class: Creates socket and spawns new thread for each request.
+2.Config: Uses the get and set methods for local host, local IP,Proxy machine name and port.	
+3.Proxy: Implements the Client Socket,Returns an input stream to the socket,Reads consecutive lines and send them to the client
+4.Request Header:Parses a HTTP header from the stream, this consists of the request lines information and the header inforamtion and content.
+5.Response Header: Header Info, response lines information for the response.
+6.Proxy cache: HOlds the cache data structure including all the helper functions. 
+7.Cache response tuple: Holds the response header and the raw binary info of the headers.
+
+
+TTl time is calculated by: last modified time,expires time and the global maximum time to live
+
+Responsibilities:
+
+Sunil: Developed the http proxy to handle the get,head and post methods and the response and the request classes as part of it(1-5).
+Eric: Developed THE CACHING MECHANISM and the changes in the http proxy to handle the caching part(6-7). Modified the classes such that it handles caching mechanism.
+
+
+[Was some how able to play some videos over youtube]
+
+ 
